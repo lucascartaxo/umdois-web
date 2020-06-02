@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: umdois
+  password: umdois
+
+development:
+  <<: *default
+  database: umdois_web_development
+test:
+  <<: *default
+  database: umdois_web_test
+production:
+  <<: *default
+  database: umdois_web_production
