@@ -1,2 +1,8 @@
-@import "materialize";
-@import "material_icons";
+@import "materialize/components/color-variables";
+$primary-color: color("green", "lighten-2") !default;
+$secondary-color: color("black", "base") !default;
+@import 'materialize';
+
+.parallax-container {
+    height: 250px;
+  }

@@ -29,10 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # front-end gems
-# jquery ????
-# https://onebitcode.com/materialize/
-gem 'jquery-rails'
-gem 'materialize-sass'
+# we might remove this due to yarn webpack
+gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
 
 group :development, :test do
