@@ -18,9 +18,6 @@ require("materialize-css/dist/js/materialize")
 // const imagePath = (name) => images(name, true)
 
 $(document).on('ready turbolinks:load', function() {
-
     $(".sidenav").sidenav();
     $(".parallax").parallax();
-
-    alert("carregou total");
 });
