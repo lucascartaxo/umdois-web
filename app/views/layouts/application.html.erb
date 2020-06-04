@@ -11,10 +11,12 @@
   </head>
 
   <body>
-  <%= render "layouts/menu" %>
+    <%= render "layouts/menu" %>
 
     <div class="row container">
       <%= yield %>
     </div>
+
+    <%= render "layouts/footer" %>
   </body>
 </html>
