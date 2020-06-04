@@ -1,13 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:500,700,800');
+// google font
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:500,700,800");
+
+// materialize color variables
 @import "materialize/components/color-variables";
 $primary-color: color("green", "lighten-1") !default;
 $secondary-color: color("black", "base") !default;
-@import 'materialize';
+
+// materialize layout
+@import "materialize";
+
+// awesome icons
+@import "font-awesome";
 
 html {
     font-family: "Open Sans", sans-serif;
-    font-style: normal;
  }
 .parallax-container {
     height: 350px;
+}
+
+footer blockquote{
+    font-size: smaller;
+    font-style: normal;
 }

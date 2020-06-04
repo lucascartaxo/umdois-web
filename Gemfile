@@ -32,6 +32,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 # we might remove this due to yarn webpack
 gem "materialize-sass", "~> 1.0.0"
 gem "material_icons"
+gem "font-awesome-rails"
 
 gem "rubocop"
 

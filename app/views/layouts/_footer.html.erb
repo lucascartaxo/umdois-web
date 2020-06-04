@@ -2,32 +2,64 @@
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h6 class="grey-text text-lighten-4">
+        <blockquote class="grey-text text-lighten-4">
             UMDOIS é o lifestyle da cultura canábica. É a voz dos maconhistas, é o momento do dia para rir da vida, rir de si mesmo ou rir só de chapado.
             <br/><br/>
             Através do entretenimento, lutamos contra a desinformação da cannabis colaborando com a redução de danos.
-        </h6>
+            <br/><br/>
+            +55 11 97266-1233
+            <br/><br/>
+            contato@lojaumdois.com.br
+        </blockquote>
       </div>
       <div class="col l4 offset-l2 s12">
         <ul>
-          <li><a class="grey-text text-lighten-3"><small>youtube.com</small>/ umdoiscanal</a></li>
-          <li><a class="grey-text text-lighten-3"><small>instagram.com</small>/ canalumdois</a></li>
-          <li><a class="grey-text text-lighten-3"><small>facebook.com</small>/ canalumdois</a></li>
+          <!--- YOUTUBE--->
+          <li>
+            <%= link_to "https://www.youtube.com/umdoiscanal", class: "grey-text text-lighten-3" do %>
+              <%= fa_icon "youtube-play", class: "fa-3x text-muted pull-left" %>
+              <small class="center-align">youtube.com/</small>
+              <br/>
+              umdoiscanal
+            <% end %>
+          </li>
+
           <li><br/></li>
-          <li><a class="grey-text text-lighten-3">+55 11 97266-1233</a></li>
-          <li><a class="grey-text text-lighten-3">contato@lojaumdois.com.br</a></li>
+
+          <!--- INSTAGRAM--->
+          <li>
+            <%= link_to "https://www.instagram.com/canalumdois", class: "grey-text text-lighten-3" do %>
+            <%= fa_icon "instagram", class: "fa-3x text-muted pull-left" %>
+              <small class="center-align">instagram.com/</small>
+              <br/>
+              canalumdois
+            <% end %>
+          </li>
+
+          <li><br/></li>
+
+          <!--- FACEBOOK --->
+          <li>
+            <%= link_to "https://www.facebook.com/canalumdois", class: "grey-text text-lighten-3" do %>
+            <%= fa_icon "facebook", class: "fa-3x text-muted pull-left" %>
+              <small class="center-align">facebook.com/</small>
+              <br/>
+              umdoiscanal
+            <% end %>
+          </li>
         </ul>
       </div>
     </div>
   </div>
+
   <div class="footer-copyright blue-grey darken-4">
     <div class="container">
-    <small>
-      UMDOIS COMUNICAÇÃO LTDA - EPP - CNPJ: 28.705.502/0001-37
-      <br/>
-      © 2020 todos os direitos reservados
-    </small>
-    <%= link_to "feito com ♡ por lucascartaxo", "http://github.com/lucascartaxo", class: "grey-text text-lighten-4 right" %>
+      <small>
+        UMDOIS COMUNICAÇÃO LTDA - EPP - CNPJ: 28.705.502/0001-37
+        <br/>
+        © 2020 todos os direitos reservados
+      </small>
+      <%= link_to "feito com ♡ por lucascartaxo", "http://github.com/lucascartaxo", class: "grey-text text-lighten-4 right" %>
     </div>
   </div>
 </footer>
