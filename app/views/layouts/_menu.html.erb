@@ -3,25 +3,50 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">umdois</a>
+                <a href="#!" class="brand-logo"><%= link_to "umdois", root_path, class: "btn" %></a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><%= link_to "LOJA", "https://www.lojaumdois.com.br"%></li>
                     <li><%= link_to "FOTOS", "https://www.instagram.com/canalumdois"%></li>
                     <li><%= link_to "VIDEOS", "https://www.youtube.com/umdoiscanal"%></li>
                     <li><%= link_to "PODCAST", "https://open.spotify.com/show/2McOI9VBsVzlpLhtlBuyzx"%></li>
-                    <li><a>BIBLIOTECA</a></li>
+                    <li><%= link_to "BIBLIOTECA", library_index_path %></li>
+                    
+                     <!-- Dropdown Login Trigger -->
+                    <li><a class="dropdown-login-trigger" data-target="dropdown-login"><%= fa_icon "user", class: "fa-2x text-muted" %><i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
+
+                <!-- Dropdown Structure -->
+                <ul id="dropdown-login" class="dropdown-content dropdown-login">
+                  <% if current_user.nil? %>
+                    <li>
+                      <%= link_to new_user_session_path do %>
+                        <%= t('devise.sessions.new.sign_in', :default => "Sign in") %>
+                      <% end %>
+                    </li>
+                  <% else %>
+                    <li>
+                      <a></a>olá <%= current_user.name %></a>
+                    </li>
+                    <li>
+                      <%= link_to destroy_user_session_path, method: :delete do %>
+                        <%= t('devise.sessions.new.sign_out', :default => "Sign out") %>
+                      <% end %>
+                    </li>
+                  <% end %>
+                </ul>
+
             </div>
         </nav>
     </div>
 
     <ul class="sidenav" id="mobile-demo">
+        <li><%= fa_icon "user", class: "fa-2x text-muted" %> olá usuário</li>
         <li><%= link_to "LOJA", "https://www.lojaumdois.com.br"%></li>
         <li><%= link_to "FOTOS", "https://www.instagram.com/canalumdois"%></li>
-        <li><<%= link_to "VIDEOS", "https://www.youtube.com/umdoiscanal"%></li>
+        <li><%= link_to "VIDEOS", "https://www.youtube.com/umdoiscanal"%></li>
         <li><%= link_to "PODCAST", "https://open.spotify.com/show/2McOI9VBsVzlpLhtlBuyzx"%></li>
-        <li><a>BIBLIOTECA</a></li>
+        <li><%= link_to "BIBLIOTECA", library_index_path %></li>
     </ul>
 </header>
 <!-- End  Header -->
