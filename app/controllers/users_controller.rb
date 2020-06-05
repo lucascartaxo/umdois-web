@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  protect_from_forgery with: :exception
+  before_action :authenticate_user!
   before_action :set_user, only: %i[show edit update destroy]
 
   # GET /users
@@ -70,6 +72,6 @@ class UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.fetch(:user).permit(:name, :username, :email)
+    params.fetch(:user).permit(:name, :username, :email, :password, :password_confirmation)
   end
 end
