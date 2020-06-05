@@ -1,4 +1,3 @@
-<main>
   <div class="container center">
     <!-- TODO refactor this shitty inline style -->
     <div  class="z-depth-3 y-depth-3 x-depth-3 grey green-text lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px; margin-top: 50px; solid #EEE;">
@@ -13,13 +12,13 @@
       <div class='row'>
         <div class='input-field col s12'>
           <%= f.label :email, class: "validate" %><br />
-          <%= f.email_field :email, required: :required %>
+          <%= f.email_field :email, required: true %>
         </div>
       </div>
       <div class='row'>
         <div class='input-field col m12'>
           <%= f.label :password, class: "validate" %><br />
-          <%= f.password_field :password, required: :required %>
+          <%= f.password_field :password, required: true %>
         </div>
         
       </div>
@@ -35,4 +34,3 @@
       
     </div>
   </div>
-</main>

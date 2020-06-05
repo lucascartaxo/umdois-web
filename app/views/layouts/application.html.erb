@@ -14,10 +14,14 @@
 <body>
   <%= render "layouts/menu" %>
 
-  <p class="notice yellow"><%= notice %></p>
-  <p class="alert red"><%= alert %></p>
+  <main>
+    <p class="notice yellow"><%= notice %></p>
+    <p class="alert red"><%= alert %></p>
+  
+    <%= yield %>
+    
+  </main>
 
-  <%= yield %>
 
   <%= render "layouts/footer" %>
 </body>
