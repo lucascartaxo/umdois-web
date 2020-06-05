@@ -18,7 +18,7 @@
 
                 <!-- Dropdown Structure -->
                 <ul id="dropdown-login" class="dropdown-content dropdown-login">
-                  <% if current_user.nil? %>
+                  <% unless user_signed_in? %>
                     <li>
                       <%= link_to new_user_session_path do %>
                         <%= t('devise.sessions.new.sign_in', :default => "Sign in") %>
