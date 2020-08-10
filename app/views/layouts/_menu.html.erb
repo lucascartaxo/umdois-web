@@ -3,7 +3,11 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo"><%= link_to "umdois", root_path, class: "btn" %></a>
+              <div class="valign-wrapper brand-logo">
+                  <%= link_to root_path do %>
+                    <%= image_tag("logo.png", class: "brand-logo brand-logo-img") %>
+                  <% end %>
+                </div>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><%= link_to "LOJA", "https://www.lojaumdois.com.br"%></li>
@@ -11,7 +15,7 @@
                     <li><%= link_to "VIDEOS", "https://www.youtube.com/umdoiscanal"%></li>
                     <li><%= link_to "PODCAST", "https://open.spotify.com/show/2McOI9VBsVzlpLhtlBuyzx"%></li>
                     <li><%= link_to "BIBLIOTECA", library_index_path %></li>
-                    
+
                      <!-- Dropdown Login Trigger -->
                     <li><a class="dropdown-login-trigger" data-target="dropdown-login"><%= fa_icon "user", class: "fa-2x text-muted pulse" %><i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>

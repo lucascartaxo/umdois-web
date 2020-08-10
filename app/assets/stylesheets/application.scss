@@ -3,7 +3,7 @@
 
 // materialize color variables
 @import "materialize/components/color-variables";
-$primary-color: color("green", "lighten-1") !default;
+$primary-color: color("grey", "darken-3") !default;
 $secondary-color: color("black", "base") !default;
 
 // materialize layout
@@ -26,4 +26,8 @@ footer blockquote {
 
 .dropdown-login {
   top: -65px;
+}
+
+.brand-logo-img {
+  height: 40px;
 }
