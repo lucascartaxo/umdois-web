@@ -12,7 +12,8 @@ $primary-color: color("grey", "darken-3") !default;
 @import "font-awesome";
 
 html {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
 
   body {
     background-color: #202123;
@@ -53,10 +54,22 @@ html {
       }
     }
   }
-}
 
-.parallax-container {
-  height: 350px;
+  .container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+  }
+  @media only screen and (min-width: 601px) {
+    .container {
+      width: 85%;
+    }
+  }
+  @media only screen and (min-width: 993px) {
+    .container {
+      width: 70%;
+    }
+  }
 }
 
 footer blockquote {
@@ -71,4 +84,20 @@ footer blockquote {
 .brand-logo-img {
   height: 40px;
   margin: 5px;
+}
+
+.banner {
+  max-width: 100%;
+}
+
+.media {
+  span {
+    font-size: xx-large;
+  }
+
+  img {
+    padding: 20px 20px 20px 20px;
+    max-width: 100%;
+  }
+
 }
