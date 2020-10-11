@@ -1,24 +1,44 @@
 <!-- Page Layout here -->
 <div class="container">
   <!-- MAIN BANNER -->
-    <%= image_tag("banner-001.png", class: "banner") %>
+    <div class="center-align">
+      <%= image_tag("banner-001.png", class: "banner") %>
+    </div>
   <!-- END MAIN BANNER -->
+</div>
 
+<br/><br/><br/>
+
+<div class="container">
   <!-- MEDIA -->
-  <div class="media">
-    <span>mídia</span>
-    <%= image_tag("banner-002.png") %>
+  <div class="center-align">
+    <%= link_to "https://www.instagram.com/canalumdois" do %>
+      <%= image_tag("banner-media.png", class: "banner-media") %>
+    <% end %>
   </div>
   <!-- END MEDIA -->
-
-  <!-- STORE -->
-  <!-- END STORE -->
-
-  <!-- APOIA.SE -->
-  <div>
-    <%= image_tag("apoia-se.png", class: "banner") %>
-  </div>
-
-  <!-- END APOIA.SE -->
 </div>
+
+<br/><br/><br/>
+
+<div class="container">
+  <!-- STORE -->
+  <div class="center-align">
+    <%= link_to "https://www.lojaumdois.com.br" do %>
+      <%= image_tag("loja-full.png", class: "banner-media") %>
+    <% end %>
+  </div>
+  <!-- END STORE -->
+</div>
+
+<br/><br/><br/>
+  <!-- APOIA.SE -->
+  <div class="container">
+    <div class="center-align">
+      <%= link_to "https://apoia.se/umdois" do %>
+        <%= image_tag("apoia-se.png", class: "banner-media")%>
+      <% end %>
+    </div>
+  </div>
+  <!-- END APOIA.SE -->
 <!-- END Page Layout -->
